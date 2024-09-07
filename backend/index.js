@@ -8,22 +8,21 @@ const UserCard = ({ user }) => {
         boxShadow: 3,
         transition: "transform 0.3s ease",
         "&:hover": {
-          transform: "scale(1.05)",
+          transform: "scale(1.07)",
         },
       }}
     >
-      <Avatar
-        src={user.avatar}
-        alt={user.name}
-        sx={{ width: 60, height: 60, marginRight: 2 }}
-      />
-      <CardContent>
-        <Typography variant="h6">{user.name}</Typography>
+  
         <Typography variant="body2" color="textSecondary">
           {user.email}
         </Typography>
+      <CardContent>
+        <Typography variant="h7">{user.name}</Typography>
         <Typography variant="body2" color="textSecondary">
-          {user.role}
+          {user.avatar}
+        </Typography>
+        <Typography variant="body2" color="textSecondary">
+          {user.name}
         </Typography>
       </CardContent>
     </Card>
